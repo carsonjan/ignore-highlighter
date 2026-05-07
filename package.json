@@ -2,7 +2,7 @@
   "name": "ignore-highlighter",
   "displayName": "Ignore Highlighter",
   "description": "Highlights files ignored by the currently focused ignore file.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "carsonjan",
   "engines": {
     "vscode": "^1.85.0"
@@ -20,9 +20,9 @@
         "id": "ignoreHighlighter.ignoredFileForeground",
         "description": "Foreground color for files ignored by the current ignore file.",
         "defaults": {
-          "dark": "#80808080",
-          "light": "#a0a0a080",
-          "highContrast": "#ffffff"
+          "dark": "gitDecoration.ignoredResourceForeground",
+          "light": "gitDecoration.ignoredResourceForeground",
+          "highContrast": "gitDecoration.ignoredResourceForeground"
         }
       }
     ],
