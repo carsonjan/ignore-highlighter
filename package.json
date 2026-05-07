@@ -1,0 +1,59 @@
+{
+  "name": "ignore-highlighter",
+  "displayName": "Ignore Highlighter",
+  "description": "Highlights files ignored by the currently focused ignore file.",
+  "version": "0.0.2",
+  "publisher": "carson",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "colors": [
+      {
+        "id": "ignoreHighlighter.ignoredFileForeground",
+        "description": "Foreground color for files ignored by the current ignore file.",
+        "defaults": {
+          "dark": "#80808080",
+          "light": "#a0a0a080",
+          "highContrast": "#ffffff"
+        }
+      }
+    ],
+    "configuration": {
+      "title": "Ignore Highlighter",
+      "properties": {
+        "ignoreHighlighter.maxIgnoreLines": {
+          "type": "integer",
+          "default": 5000,
+          "description": "Maximum number of lines allowed in an ignore file before the extension skips it for performance reasons."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "20.x",
+    "typescript": "^5.3.3",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/parser": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.19.1"
+  },
+  "dependencies": {
+    "ignore": "^5.3.1"
+  }
+}
