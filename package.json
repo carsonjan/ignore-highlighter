@@ -3,7 +3,7 @@
   "displayName": "Ignore Highlighter",
   "description": "Highlights files ignored by the currently focused ignore file.",
   "version": "0.0.2",
-  "publisher": "carson",
+  "publisher": "carsonjan",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -36,6 +36,10 @@
         }
       }
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carsonjan/ignore-highlighter"
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
